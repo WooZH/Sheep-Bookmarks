@@ -1,0 +1,22 @@
+{
+    "manifest_version": 2,
+
+    "name": "Sheep Bookmarks",
+    "description": "my bookmarks",
+    "version": "0.1",
+
+    "browser_action": {
+        "default_icon": "sheep.png",
+        "default_title": "my bookmarks",
+        "default_popup": "pop.html"
+    },
+    "icons": {
+        "16": "sheep.png",
+        "48": "sheep.png",
+        "128": "sheep.png"
+    },
+    "permissions": [
+        "tabs",
+        "bookmarks"
+    ]
+}

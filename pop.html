@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<ul class="mainUl">
+    <li v-for="item in bookMarks">
+        <div :class="{l1_title: item.title == '其他书签' || item.title == '书签栏'}">{{item.title}}</div>
+        <ul>
+            <li v-for="sub in item.children">
+                <div v-show="sub.title.indexOf(search) > -1">
+                    <a :href="sub.url" :title="sub.url" v-if="sub.url" @click="openUrl(sub.url)">{{sub.title}} <button class="delBtn" @click.stop="remove(sub.id)">Del</button></a>
+                    <span v-if="!sub.url" class="subTitle" >{{sub.title}}({{sub.children.length}}) <span  @click="open($index)"> <i class="icon open"  v-show="!numbers[$index]"></i><i class="icon close" v-show="numbers[$index]"></i></span></span>
+                </div>
+                <div v-show="!numbers[$index]">
+                    <ul v-if="sub.children" >
+                        <li v-for="l3 in sub.children">
+                            <div v-show="l3.title.indexOf(search) > -1">
+                                <a :href="l3.url" @click="openUrl(l3.url)"  :title="l3.url">
+                                    <span>{{l3.title}} <button class="delBtn" @click.stop="remove(l3.id)">Del</button></span>
+
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </li>
+        </ul>
+    </li>
+</ul>
+
+<div class="bottomArea">
+    <input class="search" type="search" v-model="search" @keyup.enter="filterMarks()" placeholder="Search">
+</div>
+
+<script src="vue.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
+
