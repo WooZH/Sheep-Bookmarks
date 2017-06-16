@@ -1,18 +1,20 @@
-##Sheep Bookmarks
+## Sheep Bookmarks
 
 A Sample extension for chrome. With Sheep Bookmarks, you can search all your bookmarks or del one easily.
 
-##Icons
+
+## Icons
 All the icons are from [iconfont.cn](http://www.iconfont.cn/)
 
-##Install
+
+## Install
 
 ```
 chrome://extensions -> Load unpacked extension... -> Select the directory
 ```
 
-##LICENSE
 
+## LICENSE
 
 可乐协议, 修改自[BEER-WARE LICENSE](https://people.freebsd.org/~phk/)
  
