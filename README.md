@@ -4,7 +4,7 @@ A Sample extension for chrome. With Sheep Bookmarks, you can search all your boo
 
 
 ## Icons
-All the icons are from [iconfont.cn](http://www.iconfont.cn/)
+Drawed a fat sheep by myself.
 
 
 ## Install
