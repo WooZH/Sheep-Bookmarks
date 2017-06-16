@@ -7,7 +7,7 @@
 <body>
 <ul class="mainUl">
     <li v-for="item in bookMarks">
-        <div :class="{l1_title: item.title == '其他书签' || item.title == '书签栏'}">{{item.title}}</div>
+        <div class="l1_title">{{item.title}}</div>
         <ul>
             <li v-for="sub in item.children">
                 <div v-show="sub.title.indexOf(search) > -1">
