@@ -10,7 +10,7 @@ All the icons are from [iconfont.cn](http://www.iconfont.cn/)
 ## Install
 
 ```
-chrome://extensions -> Load unpacked extension... -> Select the directory
+clone or download this repo -> open chrome -> open the url: chrome://extensions -> Load unpacked extension... -> Select the directory
 ```
 
 
