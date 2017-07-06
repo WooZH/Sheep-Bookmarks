@@ -8,11 +8,13 @@
 <ul class="mainUl">
     <li v-for="item in bookMarks">
         <div class="l1_title">{{item.title}}</div>
+        <div class="hr-dash"></div>
+
         <ul>
             <li v-for="sub in item.children">
                 <div v-show="sub.title.indexOf(search) > -1">
                     <a :href="sub.url" :title="sub.url" v-if="sub.url" @click="openUrl(sub.url)">{{sub.title}} <button class="delBtn" @click.stop="remove(sub.id)">Del</button></a>
-                    <span v-if="!sub.url" class="subTitle" >{{sub.title}}({{sub.children.length}}) <span  @click="open($index)"> <i class="icon open"  v-show="!numbers[$index]"></i><i class="icon close" v-show="numbers[$index]"></i></span></span>
+                    <span v-if="!sub.url" class="subTitle" >{{sub.title}} <span  @click="open($index)"> <i class="icon open"  v-show="!numbers[$index]"></i><i class="icon close" v-show="numbers[$index]"></i></span></span>
                 </div>
                 <div v-show="!numbers[$index]">
                     <ul v-if="sub.children" >

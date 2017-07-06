@@ -32,8 +32,9 @@ var vm = new Vue({
             if(index > this.numbers.length){
                 var count = index - this.numbers.length
                 for(var j = 0; j < count; j++){
-                    this.numbers.push(true);
+                    this.numbers.push(false);
                 }
+                this.numbers[index] = true;
             }
             else{
                 this.numbers.$set(index, !this.numbers[index]);
